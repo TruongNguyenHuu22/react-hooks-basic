@@ -1,11 +1,8 @@
 import "./App.scss";
+import ColorBox from "./features/pages/Color";
 
 function App() {
-    return (
-        <div className="app">
-            <h1>Welcome to React hooks</h1>
-        </div>
-    );
+    return <ColorBox />;
 }
 
 export default App;
