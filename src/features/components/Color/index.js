@@ -22,11 +22,14 @@ const ColorBox = () => {
     };
 
     return (
-        <div
-            className="color-box"
-            style={{ backgroundColor: color }}
-            onClick={handleChangeColor}
-        ></div>
+        <>
+            <h3>UseState - Color Box</h3>
+            <div
+                className="color-box"
+                style={{ backgroundColor: color }}
+                onClick={handleChangeColor}
+            ></div>
+        </>
     );
 };
 

@@ -1,8 +1,14 @@
 import "./App.scss";
-import ColorBox from "./features/pages/Color";
+import ColorBox from "./features/components/Color";
+import TodoFeature from "./features/components/TodoList";
 
 function App() {
-    return <ColorBox />;
+    return (
+        <div className="app">
+            <ColorBox />
+            <TodoFeature />
+        </div>
+    );
 }
 
 export default App;
