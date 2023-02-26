@@ -7,7 +7,7 @@ const getRandomColor = () => {
     return colorList[index];
 };
 
-const ColorBox = () => {
+const ColorBoxFeature = () => {
     const [color, setColor] = useState(() => {
         const initialColor = localStorage.getItem("CURRENT_COLOR");
         if (initialColor) return initialColor;
@@ -33,4 +33,4 @@ const ColorBox = () => {
     );
 };
 
-export default ColorBox;
+export default ColorBoxFeature;
