@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import TodoItem from "./TodoItem";
-import "./style.scss";
+import { useState } from "react";
+import TodoForm from "./TodoForm";
+import TodoList from "./TodoList";
 
 const TodoFeature = () => {
     const initTodoList = [
@@ -27,18 +27,22 @@ const TodoFeature = () => {
         setTodoList(newList);
     };
 
+    const handleFormSubmit = (formValues) => {
+        const newTodo = {
+            id: todoList.length + 1,
+            ...formValues,
+        };
+
+        const newTodoList = [...todoList];
+        newTodoList.push(newTodo);
+        setTodoList(newTodoList);
+    };
+
     return (
         <>
             <h3>UseState - Todo List</h3>
-            <ul className="todo-list">
-                {todoList.map((todo) => (
-                    <TodoItem
-                        key={todo.id}
-                        {...{ todo }}
-                        onClickTodo={handleRemoveTodo}
-                    />
-                ))}
-            </ul>
+            <TodoForm onSubmit={handleFormSubmit} />
+            <TodoList {...{ todoList }} onClickTodo={handleRemoveTodo} />
         </>
     );
 };
