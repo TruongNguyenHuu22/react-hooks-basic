@@ -46,15 +46,25 @@ const PostFeature = () => {
     };
 
     return (
-        <>
+        <div className="section-box">
             <h3>UseEffect - Post List</h3>
+            <h5>Description:</h5>
+            <ul>
+                <li>Show post list</li>
+                <li>Search post in text box</li>
+                <li>
+                    Implement pagination for post list with 2 button : previous
+                    and next
+                </li>
+            </ul>
+            <h6>Technique: Use useEffect to call API</h6>
             <PostFilterForm onSubmit={handleFiltersChange} />
             <PostList posts={postList} />
             <Pagination
                 pagination={pagination}
                 onPageChange={handlePageChange}
             />
-        </>
+        </div>
     );
 };
 

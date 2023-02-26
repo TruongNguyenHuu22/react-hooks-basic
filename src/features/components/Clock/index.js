@@ -7,8 +7,13 @@ function ClockFeature() {
     const [showClock, setShowClock] = useState(true);
 
     return (
-        <div>
+        <div className="section-box ">
             <h3>useEffect cleanup - ClockElement</h3>
+            <h5>Description: Click Hide clock button to hide clock</h5>
+            <h6>
+                Technique: Use useEffect hook with clean up to clear Interval
+                after unmounting
+            </h6>
             {showClock && <ClockElement />}
             <button onClick={() => setShowClock(false)}>Hide clock</button>
         </div>
