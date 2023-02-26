@@ -1,11 +1,6 @@
 import React, { useState } from "react";
+import { randomColor } from "../../../helpers";
 import "./styles.scss";
-
-const getRandomColor = () => {
-    const colorList = ["deeppink", "green", "yellow", "black", "blue"];
-    const index = Math.trunc(Math.random() * colorList.length);
-    return colorList[index];
-};
 
 const ColorBoxFeature = () => {
     const [color, setColor] = useState(() => {
@@ -15,7 +10,7 @@ const ColorBoxFeature = () => {
     });
 
     const handleChangeColor = () => {
-        const newColor = getRandomColor();
+        const newColor = randomColor(color);
 
         setColor(newColor);
         localStorage.setItem("CURRENT_COLOR", newColor);

@@ -1,6 +1,7 @@
 import "./App.scss";
 import ClockFeature from "./features/components/Clock";
 import ColorBoxFeature from "./features/components/Color";
+import MagicColorFeature from "./features/components/MagicColor";
 import PostFeature from "./features/components/Post";
 import TodoFeature from "./features/components/Todo";
 
@@ -9,6 +10,7 @@ function App() {
         <div className="app">
             <ClockFeature />
             <ColorBoxFeature />
+            <MagicColorFeature />
             <TodoFeature />
             <PostFeature />
         </div>
